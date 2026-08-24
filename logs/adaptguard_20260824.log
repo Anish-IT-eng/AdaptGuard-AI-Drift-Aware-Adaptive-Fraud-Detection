@@ -1,0 +1,347 @@
+2026-08-24 10:57:02 | INFO     | drift.data_monitor                  | PSI reference set for 2 features.
+2026-08-24 10:57:02 | INFO     | drift.data_monitor                  | PSI reference set for 2 features.
+2026-08-24 10:57:02 | INFO     | drift.data_monitor                  | PSI reference set for 1 features.
+2026-08-24 10:57:03 | INFO     | drift.data_monitor                  | KS reference set for 1 features.
+2026-08-24 10:57:03 | INFO     | drift.data_monitor                  | KS reference set for 1 features.
+2026-08-24 10:57:03 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 10:57:03 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 10:57:03 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 10:57:03 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 10:57:03 | WARNING  | drift.perf_monitor                  | [PageHinkley] DRIFT DETECTED at sample #211 | PH_stat=10.57
+2026-08-24 10:57:03 | WARNING  | evaluation.metrics                  | Only one class in y_true — some metrics will be undefined.
+2026-08-24 10:57:03 | INFO     | evaluation.cost                     | Cost comparison computed: 2 models × 3 ratios
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=test_model | status=candidate | PR-AUC=0.7500
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=m1 | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v2 | name=m2 | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=test | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=test | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=cand | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=production
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 10:57:04 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=cand | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | ❌ Candidate v1 REJECTED (never deployed). Reason: pr_auc too low. Current production remains vNone.
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=prod | status=production
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v2 | name=cand | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | ❌ Candidate v2 REJECTED (never deployed). Reason: failed gate. Current production remains v1.
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=production
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 10:57:04 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 10:57:04 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: test rollback
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=production
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 10:57:04 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 10:57:04 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: degraded
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=production
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 10:57:04 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 10:57:04 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 10:57:04 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: post-deployment recall drop
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=only | status=production
+2026-08-24 10:57:04 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v1. Reason: no previous model
+2026-08-24 10:57:04 | INFO     | models.registry                     | Model registered: v1 | name=prod | status=production
+2026-08-24 10:57:04 | INFO     | models.registry                     | Registry loaded: 1 versions | production=v1
+2026-08-24 10:57:04 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-8\test_output_schema0\transactions.csv
+2026-08-24 10:57:05 | INFO     | data.simulator                      | Generating dataset: 30 customers, 60 terminals, 10 days
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Generating transactions for 12 customers ...
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Done. Transactions: 221 | Fraud: 4 (1.81%)
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-8\test_fraud_rate_reasonable0\transactions.csv
+2026-08-24 10:57:05 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-8\test_chronological_order0\transactions.csv
+2026-08-24 10:57:05 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-8\test_no_negative_amounts0\transactions.csv
+2026-08-24 10:57:05 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 10:57:05 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-8\test_output_file_created0\transactions.csv
+2026-08-24 10:58:48 | INFO     | drift.data_monitor                  | PSI reference set for 1 features.
+2026-08-24 10:59:24 | INFO     | drift.data_monitor                  | PSI reference set for 2 features.
+2026-08-24 10:59:24 | INFO     | drift.data_monitor                  | PSI reference set for 2 features.
+2026-08-24 10:59:24 | INFO     | drift.data_monitor                  | PSI reference set for 1 features.
+2026-08-24 10:59:24 | INFO     | drift.data_monitor                  | KS reference set for 1 features.
+2026-08-24 10:59:24 | INFO     | drift.data_monitor                  | KS reference set for 1 features.
+2026-08-24 10:59:24 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 10:59:24 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 10:59:25 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 10:59:25 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 10:59:25 | WARNING  | drift.perf_monitor                  | [PageHinkley] DRIFT DETECTED at sample #211 | PH_stat=10.57
+2026-08-24 10:59:25 | WARNING  | evaluation.metrics                  | Only one class in y_true — some metrics will be undefined.
+2026-08-24 10:59:25 | INFO     | evaluation.cost                     | Cost comparison computed: 2 models × 3 ratios
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=test_model | status=candidate | PR-AUC=0.7500
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=m1 | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v2 | name=m2 | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=test | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=test | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=cand | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=production
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 10:59:25 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=cand | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | ❌ Candidate v1 REJECTED (never deployed). Reason: pr_auc too low. Current production remains vNone.
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=prod | status=production
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v2 | name=cand | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | ❌ Candidate v2 REJECTED (never deployed). Reason: failed gate. Current production remains v1.
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 10:59:25 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 10:59:25 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: test rollback
+2026-08-24 10:59:25 | INFO     | models.registry                     | ⏮ Restored v1 to PRODUCTION after rollback.
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 10:59:25 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 10:59:25 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: degraded
+2026-08-24 10:59:25 | INFO     | models.registry                     | ⏮ Restored v1 to PRODUCTION after rollback.
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 10:59:25 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 10:59:25 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 10:59:25 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: post-deployment recall drop
+2026-08-24 10:59:25 | INFO     | models.registry                     | ⏮ Restored v1 to PRODUCTION after rollback.
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=only | status=production
+2026-08-24 10:59:25 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v1. Reason: no previous model
+2026-08-24 10:59:25 | INFO     | models.registry                     | Model registered: v1 | name=prod | status=production
+2026-08-24 10:59:25 | INFO     | models.registry                     | Registry loaded: 1 versions | production=v1
+2026-08-24 10:59:26 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-9\test_output_schema0\transactions.csv
+2026-08-24 10:59:26 | INFO     | data.simulator                      | Generating dataset: 30 customers, 60 terminals, 10 days
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Generating transactions for 12 customers ...
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Done. Transactions: 221 | Fraud: 4 (1.81%)
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-9\test_fraud_rate_reasonable0\transactions.csv
+2026-08-24 10:59:26 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-9\test_chronological_order0\transactions.csv
+2026-08-24 10:59:26 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-9\test_no_negative_amounts0\transactions.csv
+2026-08-24 10:59:26 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 10:59:26 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-9\test_output_file_created0\transactions.csv
+2026-08-24 10:59:26 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1021 vs 0.1021 | Recall: 0.5000 | FPR: 0.4333 | Latency: 0.0ms
+2026-08-24 10:59:26 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v5 vs Production v3 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 10:59:26 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 10:59:26 | INFO     | adaptation.candidate                | [ValidationGate] ❌ REJECTED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 10:59:26 | INFO     | adaptation.candidate                | [ValidationGate] Rejection reason: PR-AUC improvement insufficient (0.1456 vs 0.1456, required +100.0000)
+2026-08-24 10:59:26 | INFO     | adaptation.candidate                | [ValidationGate] NOTE: This is a REJECTION (candidate never deployed). Production v1 continues unchanged.
+2026-08-24 10:59:26 | INFO     | adaptation.candidate                | [ValidationGate] ❌ REJECTED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 10:59:26 | INFO     | adaptation.candidate                | [ValidationGate] Rejection reason: Recall below floor (0.5667 < 1.0)
+2026-08-24 10:59:26 | INFO     | adaptation.candidate                | [ValidationGate] NOTE: This is a REJECTION (candidate never deployed). Production v1 continues unchanged.
+2026-08-24 10:59:27 | INFO     | adaptation.candidate                | [ValidationGate] ❌ REJECTED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 10:59:27 | INFO     | adaptation.candidate                | [ValidationGate] Rejection reason: PR-AUC improvement insufficient (0.1456 vs 0.1456, required +100.0000)
+2026-08-24 10:59:27 | INFO     | adaptation.candidate                | [ValidationGate] NOTE: This is a REJECTION (candidate never deployed). Production v1 continues unchanged.
+2026-08-24 10:59:27 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 10:59:27 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:00:18 | INFO     | drift.data_monitor                  | PSI reference set for 2 features.
+2026-08-24 11:00:18 | INFO     | drift.data_monitor                  | PSI reference set for 2 features.
+2026-08-24 11:00:18 | INFO     | drift.data_monitor                  | PSI reference set for 1 features.
+2026-08-24 11:00:18 | INFO     | drift.data_monitor                  | KS reference set for 1 features.
+2026-08-24 11:00:18 | INFO     | drift.data_monitor                  | KS reference set for 1 features.
+2026-08-24 11:00:18 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 11:00:18 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 11:00:18 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 11:00:18 | WARNING  | drift.perf_monitor                  | [PageHinkley] DRIFT DETECTED at sample #211 | PH_stat=10.57
+2026-08-24 11:00:18 | WARNING  | evaluation.metrics                  | Only one class in y_true — some metrics will be undefined.
+2026-08-24 11:00:18 | INFO     | evaluation.cost                     | Cost comparison computed: 2 models × 3 ratios
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=test_model | status=candidate | PR-AUC=0.7500
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=m1 | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v2 | name=m2 | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=test | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=test | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=cand | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=production
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 11:00:18 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=cand | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | ❌ Candidate v1 REJECTED (never deployed). Reason: pr_auc too low. Current production remains vNone.
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=prod | status=production
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v2 | name=cand | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | ❌ Candidate v2 REJECTED (never deployed). Reason: failed gate. Current production remains v1.
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 11:00:18 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 11:00:18 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: test rollback
+2026-08-24 11:00:18 | INFO     | models.registry                     | ⏮ Restored v1 to PRODUCTION after rollback.
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 11:00:18 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 11:00:18 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: degraded
+2026-08-24 11:00:18 | INFO     | models.registry                     | ⏮ Restored v1 to PRODUCTION after rollback.
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 11:00:18 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 11:00:18 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 11:00:18 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: post-deployment recall drop
+2026-08-24 11:00:18 | INFO     | models.registry                     | ⏮ Restored v1 to PRODUCTION after rollback.
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=only | status=production
+2026-08-24 11:00:18 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v1. Reason: no previous model
+2026-08-24 11:00:18 | INFO     | models.registry                     | Model registered: v1 | name=prod | status=production
+2026-08-24 11:00:18 | INFO     | models.registry                     | Registry loaded: 1 versions | production=v1
+2026-08-24 11:00:18 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-10\test_output_schema0\transactions.csv
+2026-08-24 11:00:19 | INFO     | data.simulator                      | Generating dataset: 30 customers, 60 terminals, 10 days
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Generating transactions for 12 customers ...
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Done. Transactions: 221 | Fraud: 4 (1.81%)
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-10\test_fraud_rate_reasonable0\transactions.csv
+2026-08-24 11:00:19 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-10\test_chronological_order0\transactions.csv
+2026-08-24 11:00:19 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-10\test_no_negative_amounts0\transactions.csv
+2026-08-24 11:00:19 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 11:00:19 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-10\test_output_file_created0\transactions.csv
+2026-08-24 11:00:19 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1021 vs 0.1021 | Recall: 0.5000 | FPR: 0.4333 | Latency: 0.0ms
+2026-08-24 11:00:19 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v5 vs Production v3 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:00:19 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] ❌ REJECTED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] Rejection reason: PR-AUC improvement insufficient (0.1456 vs 0.1456, required +100.0000)
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] NOTE: This is a REJECTION (candidate never deployed). Production v1 continues unchanged.
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] ❌ REJECTED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] Rejection reason: Recall below floor (0.5667 < 1.0)
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] NOTE: This is a REJECTION (candidate never deployed). Production v1 continues unchanged.
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] ❌ REJECTED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] Rejection reason: PR-AUC improvement insufficient (0.1456 vs 0.1456, required +100.0000)
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] NOTE: This is a REJECTION (candidate never deployed). Production v1 continues unchanged.
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:00:20 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:10:15 | INFO     | drift.data_monitor                  | PSI reference set for 2 features.
+2026-08-24 11:10:15 | INFO     | drift.data_monitor                  | PSI reference set for 2 features.
+2026-08-24 11:10:15 | INFO     | drift.data_monitor                  | PSI reference set for 1 features.
+2026-08-24 11:10:15 | INFO     | drift.data_monitor                  | KS reference set for 1 features.
+2026-08-24 11:10:15 | INFO     | drift.data_monitor                  | KS reference set for 1 features.
+2026-08-24 11:10:15 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 11:10:15 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 11:10:15 | ERROR    | drift.perf_monitor                  | River not installed. ADWIN unavailable.
+2026-08-24 11:10:15 | WARNING  | drift.perf_monitor                  | [PageHinkley] DRIFT DETECTED at sample #211 | PH_stat=10.57
+2026-08-24 11:10:15 | WARNING  | evaluation.metrics                  | Only one class in y_true — some metrics will be undefined.
+2026-08-24 11:10:15 | INFO     | evaluation.cost                     | Cost comparison computed: 2 models × 3 ratios
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=test_model | status=candidate | PR-AUC=0.7500
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=m1 | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v2 | name=m2 | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=test | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=test | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=cand | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=production
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 11:10:15 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=cand | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | ❌ Candidate v1 REJECTED (never deployed). Reason: pr_auc too low. Current production remains vNone.
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=prod | status=production
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v2 | name=cand | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | ❌ Candidate v2 REJECTED (never deployed). Reason: failed gate. Current production remains v1.
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 11:10:15 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 11:10:15 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: test rollback
+2026-08-24 11:10:15 | INFO     | models.registry                     | ⏮ Restored v1 to PRODUCTION after rollback.
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 11:10:15 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 11:10:15 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: degraded
+2026-08-24 11:10:15 | INFO     | models.registry                     | ⏮ Restored v1 to PRODUCTION after rollback.
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=v1 | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | ✅ Promoted v1 to PRODUCTION
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v2 | name=v2 | status=candidate
+2026-08-24 11:10:15 | INFO     | models.registry                     | Previous production v1 → archived
+2026-08-24 11:10:15 | INFO     | models.registry                     | ✅ Promoted v2 to PRODUCTION
+2026-08-24 11:10:15 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v2. Reason: post-deployment recall drop
+2026-08-24 11:10:15 | INFO     | models.registry                     | ⏮ Restored v1 to PRODUCTION after rollback.
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=only | status=production
+2026-08-24 11:10:15 | WARNING  | models.registry                     | ⏮ ROLLBACK triggered for v1. Reason: no previous model
+2026-08-24 11:10:15 | INFO     | models.registry                     | Model registered: v1 | name=prod | status=production
+2026-08-24 11:10:15 | INFO     | models.registry                     | Registry loaded: 1 versions | production=v1
+2026-08-24 11:10:15 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-11\test_output_schema0\transactions.csv
+2026-08-24 11:10:16 | INFO     | data.simulator                      | Generating dataset: 30 customers, 60 terminals, 10 days
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Generating transactions for 12 customers ...
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Done. Transactions: 221 | Fraud: 4 (1.81%)
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-11\test_fraud_rate_reasonable0\transactions.csv
+2026-08-24 11:10:16 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-11\test_chronological_order0\transactions.csv
+2026-08-24 11:10:16 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-11\test_no_negative_amounts0\transactions.csv
+2026-08-24 11:10:16 | INFO     | data.simulator                      | Generating dataset: 20 customers, 40 terminals, 5 days
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Generating transactions for 5 customers ...
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Adding fraud labels ...
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Done. Transactions: 58 | Fraud: 3 (5.17%)
+2026-08-24 11:10:16 | INFO     | data.simulator                      |   Saved to C:\Users\anish\AppData\Local\Temp\pytest-of-anish\pytest-11\test_output_file_created0\transactions.csv
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1021 vs 0.1021 | Recall: 0.5000 | FPR: 0.4333 | Latency: 0.0ms
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v5 vs Production v3 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] ❌ REJECTED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] Rejection reason: PR-AUC improvement insufficient (0.1456 vs 0.1456, required +100.0000)
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] NOTE: This is a REJECTION (candidate never deployed). Production v1 continues unchanged.
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] ❌ REJECTED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] Rejection reason: Recall below floor (0.5667 < 1.0)
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] NOTE: This is a REJECTION (candidate never deployed). Production v1 continues unchanged.
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] ❌ REJECTED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] Rejection reason: PR-AUC improvement insufficient (0.1456 vs 0.1456, required +100.0000)
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] NOTE: This is a REJECTION (candidate never deployed). Production v1 continues unchanged.
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms
+2026-08-24 11:10:16 | INFO     | adaptation.candidate                | [ValidationGate] ✅ PASSED | Candidate v2 vs Production v1 | PR-AUC: 0.1456 vs 0.1456 | Recall: 0.5667 | FPR: 0.4519 | Latency: 0.0ms

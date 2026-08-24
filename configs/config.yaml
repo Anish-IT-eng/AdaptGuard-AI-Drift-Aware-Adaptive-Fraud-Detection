@@ -1,0 +1,182 @@
+# ============================================================
+# AdaptGuard AI — Master Configuration
+# ============================================================
+
+project:
+  name: "AdaptGuard AI"
+  version: "1.0.0"
+  description: "Drift-Aware Adaptive Fraud Detection Under Evolving Transaction Distributions"
+
+# ---- Paths ----
+paths:
+  data_raw:       "data/raw"
+  data_processed: "data/processed"
+  models_dir:     "models"
+  results_dir:    "results"
+  mlflow_uri:     "mlruns"
+  logs_dir:       "logs"
+
+# ---- Simulator ----
+simulator:
+  n_customers:    5000
+  n_terminals:    10000
+  nb_days:        183
+  start_date:     "2023-01-01"
+  r_fraud:        0.0084        # ~0.84% base fraud rate
+  random_state:   42
+
+# ---- Data Splits ----
+splits:
+  train_days:  60               # Days 1–60 initial training
+  eval_start:  60               # Day 60+ evaluation stream
+
+# ---- Feature Engineering ----
+features:
+  velocity_windows_min:   [5, 10, 60, 1440]   # 5min, 10min, 1h, 24h
+  customer_history_days:  [1, 7, 30]
+  terminal_history_days:  [1, 7, 30]
+
+# ---- Class Imbalance ----
+imbalance:
+  strategy:  "class_weight"     # class_weight | smote | none
+  smote_experiment: false       # run SMOTE as ablation only
+
+# ---- Baseline Models ----
+models:
+  logistic_regression:
+    C: 1.0
+    max_iter: 1000
+    class_weight: "balanced"
+    random_state: 42
+
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    class_weight: "balanced"
+    random_state: 42
+    n_jobs: -1
+
+  xgboost:
+    n_estimators: 300
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    scale_pos_weight: 119       # approx (1-fraud_rate)/fraud_rate; tune experimentally
+    random_state: 42
+    eval_metric: "aucpr"
+    early_stopping_rounds: 30
+
+  sgd_classifier:
+    loss: "log_loss"
+    class_weight: "balanced"
+    random_state: 42
+    learning_rate: "optimal"
+
+  river_hoeffding_tree:
+    grace_period: 200
+    delta: 1.0e-7
+
+# ---- Periodic Retraining ----
+periodic_retraining:
+  intervals_days: [1, 7, 14, 30]
+
+# ---- Drift Detection ----
+drift:
+  # ADWIN (performance monitor — needs confirmed labels)
+  adwin:
+    delta: 0.002              # sensitivity; tune experimentally
+
+  # Page-Hinkley
+  page_hinkley:
+    threshold: 50
+    alpha: 0.9999
+
+  # KSWIN
+  kswin:
+    alpha: 0.005
+    window_size: 100
+    stat_size: 30
+
+  # PSI (feature-level — label-free)
+  psi:
+    bins: 10
+    min_bucket_size: 5
+    # NOTE: thresholds below are starting points only; calibrate experimentally
+    warn_threshold: 0.10
+    alert_threshold: 0.20
+
+  # MMD (advanced; label-free)
+  mmd:
+    kernel: "rbf"
+    n_permutations: 100       # for permutation test
+
+  # Reference window for data drift monitor
+  reference_window_days: 30
+  current_window_days:   7
+
+# ---- Drift Severity ----
+severity:
+  # Conceptual thresholds — must be calibrated experimentally
+  levels:
+    NONE:     { adwin_signal: false, psi_max: 0.10, error_trend: 0.0  }
+    LOW:      { adwin_signal: false, psi_max: 0.15, error_trend: 0.01 }
+    MEDIUM:   { adwin_signal: true,  psi_max: 0.20, error_trend: 0.03 }
+    HIGH:     { adwin_signal: true,  psi_max: 0.30, error_trend: 0.05 }
+    CRITICAL: { adwin_signal: true,  psi_max: 99.0, error_trend: 0.10 }
+
+# ---- Adaptive Controller ----
+adaptation:
+  min_severity_to_adapt: "MEDIUM"  # below this: only monitor
+  candidate_window_days: 14        # recent data window for candidate training
+  validation_window_days: 7        # held-out window for validation
+
+  # Promotion gate (thresholds — calibrate experimentally)
+  gate:
+    prauc_improvement: 0.005       # candidate must improve by at least this
+    recall_floor:      0.60        # candidate recall must not fall below this
+    fpr_ceiling:       0.10        # candidate FPR must not exceed this
+    latency_ceiling_ms: 50         # inference latency upper bound
+
+# ---- Delayed Labels ----
+delayed_labels:
+  delay_days: [0, 1, 3, 7]        # experiment conditions
+  default_delay_days: 3
+
+# ---- Evaluation ----
+evaluation:
+  primary_metric: "pr_auc"
+  prequential_window: 1000         # rolling window for metric tracking
+  top_k_precision: 100             # Precision@K
+
+  # Business cost ratios (FN:FP)
+  cost_ratios:
+    - { fn_cost: 10, fp_cost: 1 }
+    - { fn_cost: 5,  fp_cost: 1 }
+    - { fn_cost: 2,  fp_cost: 1 }
+
+  # Statistical evaluation
+  bootstrap_samples: 1000
+  confidence_level:  0.95
+
+# ---- MLflow ----
+mlflow:
+  experiment_name: "AdaptGuard-AI"
+  tracking_uri:    "mlruns"
+
+# ---- API ----
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+
+# ---- Dashboard ----
+dashboard:
+  port: 8501
+  refresh_interval_ms: 800
+
+# ---- Database ----
+database:
+  url: "postgresql://adaptguard:password@localhost:5432/adaptguard"
+  # Set to sqlite for local development without PostgreSQL:
+  # url: "sqlite:///adaptguard.db"
